@@ -1,0 +1,62 @@
+<!-- 
+Countdown Timer | Javascript Beginner Project Tutorial
+
+https://www.youtube.com/watch?v=4_o3wO6aawg
+
+Apr 17, 2020
+
+CodeDuck
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Countdown Timer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <h1>Countdown Timer</h1>
+
+    <div id="container">
+
+        <!-- First row -->
+        <p id="hour-label" class="label">Hours</p>
+        <p id="min-label" class="label">Minutes</p>
+        <p id="sec-label" class="label">Seconds</p>
+
+
+        <!-- 2nd row -->
+        <!-- Chú ý là vừa nhập vừa hiển thị ở đây luôn -->
+
+        <!-- Hour max là 99 hours -->
+        <input id="hour" type="number" max="99" min="0" value="0" class="time">
+        <p id="p1" class="semicolon">:</p>
+
+
+        <input id="minute" type="number" max="60" min="0" value="0" class="time">
+        <p id="p2" class="semicolon">:</p>
+
+
+        <input id="sec" type="number" max="60" min="0" value="0" class="time">
+        
+
+        <!-- 3rd row -->
+        <button id="start" class="btn">Start</button>
+        
+        <button id="reset" class="btn">Reset</button>
+
+        <!-- tự thêm vô -->
+        <button id="pause" class="btn">Pause</button>
+
+    </div>
+
+    <!-- ======================================================== -->
+    <script src="script.js"></script>
+    
+</body>
+</html>

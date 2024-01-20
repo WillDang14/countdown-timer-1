@@ -1,0 +1,253 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #333232;
+    /* height: 100%; */
+}
+
+
+/* tự thêm vô */
+body {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    /* min-height: 100vh; */
+    min-height: 100svh;
+    gap: 20px;
+}
+
+/* ============================================================== */
+h1 {
+    color: white;
+    
+    font-family: Arial, Helvetica, sans-serif;
+
+    text-align: center;
+
+    border: 1px solid red;
+}
+
+/* ============================================================== */
+#container {
+    height: 200px;
+    /* width: 700px; */
+    
+    background-color: #F5E4C3;
+
+    margin: 0 auto;
+    
+    border: 5px solid #88B169;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+
+    /* tự thêm vô */
+    max-width: 700px;
+    width: 100%;
+
+}
+
+/* ============================================================== */
+/*label*/
+/* Cái này chính là 1st row */
+.label {
+    margin: 0;
+
+    justify-self: center;
+    align-self: center;
+
+    font-size: 30px;
+
+    /* border: 1px solid red; */
+
+}
+
+/* grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end | itemname; */
+#hour-label {
+    /* grid-area: 1 / 2 / 1 / 3; */
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#min-label {
+    /* grid-area: 1 / 3 / 1 / 4; */
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+#sec-label {
+    /* grid-area: 1 / 4 / 1 / 5; */
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+
+/* ============================================================== */
+/*times*/
+.time {
+    /* justify-self: center; */
+    /* align-self: center; */
+    place-self: center;
+
+    border: none;
+
+    background-color: #ffffff00;
+    
+    font-size: 50px;
+    
+    width: 70px;
+    height: 50px;
+
+    /* tự thêm vô */
+    /* border: 1px solid blue; */
+    /* Cho rộng hơn chút để hiển thị 2 chữ số cho rõ */
+    width: 80px;
+}
+
+#hour {
+    /* grid-area: 2 / 2 / 2 / 3; */
+    
+    grid-area: 2 / 2 / 3 / 3;
+
+    /* border: 2px solid green; */
+
+}
+
+.semicolon {
+    justify-self: center;
+    align-self: center;
+
+    font-size: 30px;
+ 
+    margin: 0;
+}
+
+
+#p1 {
+    /* Chú ý là #p1 sẽ chiếm 2 ô tính từ line 2 tới line 4 */
+    /* grid-area: 2 / 2 / 2 / 4; */
+    grid-area: 2 / 2 / 3 / 4;
+
+    /* border: 2px solid rgb(183, 0, 255); */
+
+}
+
+
+#minute {
+    /* grid-area: 2 / 3 / 2 / 4; */
+    grid-area: 2 / 3 / 3 / 4;
+
+    /* border: 2px solid red; */
+}
+
+#p2 {
+
+    /* Chú ý là #p2 sẽ chiếm 2 ô tính từ line đứng 3 tới line đứng 5 */   
+    /* grid-area: 2 / 3 / 2 / 5; */
+    grid-area: 2 / 3 / 3 / 5;
+
+}
+
+
+#sec {
+    /* grid-area: 2 / 4 / 2 / 5; */
+    grid-area: 2 / 4 / 3 / 5;
+    /* border: 2px solid rgb(0, 255, 128); */
+}
+
+
+/* ============================================================== */
+/*buttons*/
+.btn {
+    align-self: center;
+    justify-self: center;
+    
+    width: 100px;
+    height: 40px;
+
+    font-size: 30px;
+
+}
+
+
+/* Button reset sẽ chiếm 2 ô có line đứng 2 và 4 */
+#start {
+    
+    /* grid-area: 3 / 2 / 4 / 4; */
+
+
+    /* Thêm button Pause nên sắp xếp lại */
+    grid-area: 3 / 2 / 4 / 3;
+
+
+}
+
+
+/* Button reset sẽ chiếm 2 ô có line đứng 3 và 5 */
+#reset {
+    
+    /* grid-area: 3 / 3 / 4 / 5; */
+
+
+    /* Thêm button Pause nên sắp xếp lại */
+    grid-area: 3 / 4 / 4 / 5;
+}
+
+
+/* ============================================================== */
+#pause {
+    /* Thêm button Pause nên sắp xếp lại */
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+
+/* ============================================================== */
+/* Chrome, Safari, Edge, Opera */
+.time.display-arrow::-webkit-outer-spin-button,
+.time.display-arrow::-webkit-inner-spin-button
+{
+    /* -webkit-appearance: none; */
+    appearance: none;
+    /* margin: 0; */
+}
+
+
+/* Firefox */
+.time.display-arrow {
+    /* -moz-appearance: textfield; */
+    appearance: textfield;
+}
+
+
+/* ============================================================== */
+@media (max-width: 700px) {
+
+    .label {
+        font-size: 20px;
+    }
+    
+
+    .btn {
+        font-size: 20px;
+        width: 90%;
+    }
+
+
+    .time {
+       
+        font-size: 30px;
+            
+        /* tự thêm vô */
+        /* border: 1px solid blue; */
+        /* Cho rộng hơn chút để hiển thị 2 chữ số cho rõ */
+        width: 60px;
+
+        border: unset;
+    }
+}
